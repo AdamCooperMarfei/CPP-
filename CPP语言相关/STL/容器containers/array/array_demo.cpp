@@ -86,7 +86,7 @@ int main()
     std::array<char, 12> chararray;
     std::memcpy(chararray.data(), cstr, 12);
     std::cout<<chararray.data()<<'\n';
-    myarray.fill(40);
+    //myarray.fill(40);
     for (int &x:myarray)
     {
         /* code */
@@ -97,10 +97,18 @@ int main()
     //int myelement
     std::tuple_element<0, decltype(myarray)>::type myelement;
     myelement = std::get<2> (myarray);
-    
-
-
-
-
+    std::get<2>(myarray) = std::get<0>(myarray);
+    std::get<0>(myarray) = myelement;
+    std::cout<<"myarray first element is: "<<std::get<0>(myarray)<<'\n';
+    std::cout<<"mytuple first element is: "<<std::get<0>(mytuple)<<'\n';
+    std::array<int, 5> a = {10, 20, 30, 40, 50};
+    std::array<int, 5> b = {10, 20, 30, 40, 50};
+    std::array<int, 5> c = {50, 40, 30, 20, 10};
+    if (a==b) std::cout << "a and b are equal\n";
+    if (b!=c) std::cout << "b and c are not equal\n";
+    if (b<c) std::cout << "b is less than c\n";
+    if (c>b) std::cout << "c is greater than b\n";
+    if (a<=b) std::cout << "a is less than or equal to b\n";
+    if (a>=b) std::cout << "a is greater than or equal to b\n"; 
     return 0;
 }

@@ -19,6 +19,11 @@ int main()
         /* code */
         std::cout<<' '<<*it;
     }
+    std::vector<bool>test(26);
+    for(auto i = test.begin();i!= test.end();++i)
+    {
+        std::cout<<*i;
+    }
     return 0;
     
 }

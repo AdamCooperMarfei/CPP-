@@ -168,3 +168,21 @@ template<size_t I, class T, size_t N>T&&get(array<T, N>&&arr)noexcept;
 template<size_t I, class T, size_t N>const T&get(const array<T, N>&arr)noexcept;
 ```
 
+- relational operators(array)
+
+形如：arrayA != arrayB,arrayA>array；依次比较数组每个元素的大小关系。
+
+```c++
+template<class T, size_T N>
+  bool operator ==(const array<T, N>&lhs, const array<T, N>&rhs);
+template<class T, size_T N>
+  bool operator != (const array<T, N>&lhs, const array<T, N>&rhs);
+template<class T, size_T N>
+  bool operator < (const array<T, N>&lhs, const array<T, N>&rhs);
+template<class T, size_T N>
+  bool operator <= (const array<T, N>&lhs, const array<T, N>&rhs);
+template<class T, size_T N>
+  bool operator > (const array<T, N>&lhs, const array<T, N>&rhs);
+template<class T, size_T N>
+  bool operator >= (const array<T, N>&lhs, const array<T, N>&rhs);
+```
