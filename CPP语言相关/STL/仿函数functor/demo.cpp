@@ -21,7 +21,4 @@ int main(){
     };
     lam(4);
     lam.operator()(5);
-    
-
-    
 }

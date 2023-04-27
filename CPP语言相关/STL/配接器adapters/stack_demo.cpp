@@ -11,5 +11,4 @@ int main(){
         std::cout<<s.top()<<std::endl;
         s.pop();
     }
-    
 }

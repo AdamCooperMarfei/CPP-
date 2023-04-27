@@ -1,9 +1,12 @@
 #include<iostream>
 #include<array>
+#include<vector>
 #include<tuple>
 int main()
 {
     std::array<int, 5> myarray = {2, 16, 5, 61, 90};
+    std::vector<std::array<int, 5>> myInts;
+    myInts.push_back(myarray);
     std::cout<<"myarray contains"<<std::endl;
     std::cout<<"begin用法:"<<std::endl;
     for (auto i = myarray.begin(); i < myarray.end(); ++i)
